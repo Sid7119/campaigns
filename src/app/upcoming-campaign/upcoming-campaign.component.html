@@ -1,0 +1,18 @@
+<table>
+    <tr>
+      <th>DATE</th>
+      <th>CAMPAIGN</th>
+      <th>VIEW</th>
+      <th>ACTIONS</th>
+    </tr>
+    <tr *ngFor = "let campaign of futureCampaigns">
+      <td>{{campaign.date | date : 'yyyy-MM-dd'}}</td>
+      <td style = "color : #676789;">{{campaign.name}}</td>
+      <td><img [src]="campaign.image" style = "max-height : 30px;max-width : 30px;" (click) = "openModal()"></td>
+      <td><img [src]="campaign.action_image" style = "max-height : 20px;max-width : 20px;"><input style = "    margin-left: -151px;
+        opacity: 0;"type = "date"/></td>
+    </tr>
+  </table>
+
+  
+  
